@@ -5,6 +5,8 @@
 In recent years, Anthropogenic activities have had a substantial negative effect on biodiversity, with countless species becoming endangered and/or going extinct yearly; along with endangering the critical ecosystem services they underpin. The Lepidoptera family are vital to ecosystem functionality, playing a key role in the pollination of numerous plant species (Johnson, 1994). It is widely known that species within Lepidoptera have been unequivocally affected by human activities, with negative trends in populations seen globally (Warren et al., 2021). Therefore, it is of great importance to examine spatial and temporal trends in species richness and abundance of this important taxonomic group, in order to determine where conservation efforts should be focused. Here, I aim to examine the changes in Lepidoptera across time and space with respect to species richness and abundance. As the main hypothesis, it seems evident that species richness and abundance will vary across time, with negative trends likely. However, given that different localities are subject to varying levels of disturbance, it could also be that temporal trends in species richness and abundance of Lepidoptera will vary across regions.
 
 **Methods**
+
+
 1. **Data collection**
 In this assessment, the Global Biodiversity Information Facility (GBIF) ‘Bumblebees and butterflies in Norway’ public data set was utilised. This data set was created by the Norwegian institute of nature research through representative surveys across 52 localities in 5 different regions of Norway. Surveys started in 2009 and are conducted three times throughout the summer, with a standardised method. This includes visual identification and sweep netting along fixed transects (Åström S and Åström J (2022).
 
@@ -18,6 +20,8 @@ Exploratory data analysis was carried out prior to analysis to observe the distr
 The data analysed here is count data, and for both dependant variables, the preliminary exploratory data analysis histograms show that the data is highly skewed to the left and compromised by various meaningful 0s; hence analysis with a generalised linear model with a poisson error distribution is most appropriate. However, given that many sampling events took place in the same area of each region, the observations are not independent from each other, violating a central assumption of (generalised) linear modelling. To account for this pseudoreplication, generalised linear mixed-effects models with a poisson error distribution were built with the ‘lme4’ package (Bates et al., 2015) for species richness and abundance, with days since study start, region, and interaction between these two as fixed predictors, and locality as a random predictor. According to Bates et al., a random effect should have at least 7 levels, meaning that locality provides an adequate random effect (52 localities). Model validation was carried out through residual plots. In both cases, the residuals follow an adequate distribution, with variance being largely homogenous around the mean and with no observations having too much leverage. In addition, the dispersion parameter was calculated with the ‘blmeco’ package (Korner-Nievergelt et al. 2015) to determine the degree of over/under dispersion. In both cases, no signs of over/under dispersion were detected (Species richness full model: 1.09, Abundance full model: 1.11). To determine the relative contribution of predictor variables, a deconstruction technique was utilised whereby predictors were removed sequentially and tested against the previous model with a Likelihood Ratio Test to determine if the removal of a given term results in a significantly worse model. Indicators of model quality, obtained for all models were AIC and Deviance. Data visualisation was carried out with ggplot2, using the model outputs to calculate lines of best fit.
 
 **Results**
+
+
 a. **Relative abundance**
 Sequential deconstruction of the contribution effect of fixed predictors on relative abundance of Lepidoptera abundance suggests that all predictors have a significant effect (interaction: Chi=679.87, p <0.0001| Days: Chi=68.51, p<0.0001 | Region: Chi=22.046, p=0.0001) (see Table 1). However, the lowest AIC and deviance was observed for the full model (AIC – 25622.5, Deviance – 19552.96) (Table 1.), suggesting that including all terms and the interaction gives place to the model which best represents the observed data.
 
@@ -29,7 +33,12 @@ Thus, it seems that the effect of time on abundance is reliant on region (and vi
 
 
 Figure 1: Abundance of Lepidoptera over study duration (2009-2021) across 5 regions of Norway
- 
+![DIV_plot](https://github.com/morganlangley98/Linear-Mixed-Effect-GBIF-Norway-Moths/assets/122368285/ecaf322b-18d7-43b4-8c24-87c16c7e456e)
+
+
+
+
+
 b. **Species richness**
 With regards to species richness, removal of fixed predictors indicates that they are all important terms with significant explanatory power (interaction: Chi=91.9, p <0.0001| Days: Chi=11.6, p= 0.0006 | Region: Chi=41.8, p<0.0001) (Table 2.). However, parameters indicative of the model quality suggest that the full model including an interaction between time and region is the most adequate, displaying the lowest AIC and Deviance of all the models (AIC=7290.6, Deviance=2729.0) (Table 2.), thus similar to abundance, the model suggests that the effect of time on species richness varies across regions.
 
