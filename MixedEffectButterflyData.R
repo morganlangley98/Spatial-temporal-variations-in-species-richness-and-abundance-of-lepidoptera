@@ -1,11 +1,14 @@
-setwd("~/Documents/Term 1/Computational Methods in Biodiversity - BIOS0002/StatsAssign2")
+library(tidyverse)
+library(blmeco)
+library(lme4)
+library(ggplot2)
+
+setwd("directory")
 
 ### read data
 dat<-data.table::fread('Bumble_Butter.csv') 
 
 unique(dat$locality)
-
-library(tidyverse)
 
 ### Get unique event id, based on locality and event date
 dat$evendID <- paste0(dat$locality, ' ', dat$eventDate)
@@ -38,12 +41,8 @@ boxplot(AB$abundance~AB$stateProvince)
 
 plot(AB$abundance~AB$days.str)
 
-### data looks very much poisson distributed, and its count data, thus need to analyse with poisson glm
+### data looks poisson distributed, and its count data, thus need to analyse with poisson glm
 ### however, non independence of observations arising from data collection at some locality, use mixed effects poisson glm
-
-library(blmeco)
-library(lme4)
-
 
 mod_ab1 <- glmer(abundance~days.str+stateProvince+days.str:stateProvince
                  + (1|locality), data=AB, family='poisson')
@@ -149,9 +148,6 @@ ves_line <- glm.lfb(data=AB[AB$stateProvince=="Vestfold og Telemark",],
                   predictor='days.str', intercept=ves_int, slope=ves_slp)
 
 ### Plot with ggplot2
-
-library(ggplot2)
-
 ### custom x labels
 
 #specify labels for plot
@@ -232,9 +228,6 @@ hist(DIV$richness)
 
 ### Highly-skewed to the left
 ### fit poisson GLM
-
-library(lme4)
-library(blmeco)
 
 DIV$days.strt2 <- scale(DIV$days.strt)
 
@@ -323,9 +316,6 @@ ves_line <- glm.lfb(data=DIV[DIV$region=="Vestfold og Telemark",], predictor='da
                     intercept=ves_int, slope=ves_slp)
 
 ### plot it with ggplot
-
-
-library(ggplot2)
 
 ### levels have been somehow modified, change to alphabetical order to match Abundance plot
 DIV$region <- factor(DIV$region, levels=c("Agder","Rogaland","Trøndelag", 'Vestfold og Telemark', 'Viken'))
