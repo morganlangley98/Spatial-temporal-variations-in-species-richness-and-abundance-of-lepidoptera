@@ -33,7 +33,8 @@ Table 1: Outputs from backwards stepwise model selection with AIC, Deviance, Chi
 Thus, it seems that the effect of time on abundance is reliant on region (and vice versa), with different regions experiencing different trends over time. For instance, for Adger, Rogaland, and Trondelag, a positive trend can be observed in abundance over time (Agder: slope =0.0003, intercept =1.384, | Rogaland: slope = 0.0004, intercept =1.268 | Trondelag: slope =0.0002, intercept = 1.497), with the effect being strongest in Rogaland (0.0004), and weakest for Trondelag (0.0002) (Figure 1.) In contrast, abundance of Lepidoptera in both Vestfold og Telemark and Viken appears to decrease over time (Vestfold og Telemark: slope = -6.089, intercept =2.809, | Viken: slope =-4.087, intercept =3.109) with both sites showing a similar negative trend (-6.089 / - 4.087) (Figure 1.).
 
 
-![DIV_plot](https://github.com/morganlangley98/Linear-Mixed-Effect-GBIF-Norway-Moths/assets/122368285/ecaf322b-18d7-43b4-8c24-87c16c7e456e)
+![AB_plot](https://github.com/morganlangley98/Spatial-temporal-variations-in-species-richness-and-abundance-of-lepidoptera/assets/122368285/ea7f84bd-dfe2-4e7a-9145-d0619de75fb4)
+
 
 Figure 1: Abundance of Lepidoptera over study duration (2009-2021) across 5 regions of Norway
 
