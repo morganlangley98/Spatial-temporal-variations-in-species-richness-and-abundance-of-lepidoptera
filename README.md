@@ -27,14 +27,15 @@ Sequential deconstruction of the contribution effect of fixed predictors on rela
 
 Table 1: Outputs from backwards stepwise model selection with AIC, Deviance, Chi-squared and P value for each term
 
+<img width="520" alt="Screenshot 2023-12-06 at 22 39 42" src="https://github.com/morganlangley98/Spatial-temporal-variations-in-species-richness-and-abundance-of-lepidoptera/assets/122368285/d36fd87a-7ee9-4e64-a916-3c5c71cac1e2">
 
 
 Thus, it seems that the effect of time on abundance is reliant on region (and vice versa), with different regions experiencing different trends over time. For instance, for Adger, Rogaland, and Trondelag, a positive trend can be observed in abundance over time (Agder: slope =0.0003, intercept =1.384, | Rogaland: slope = 0.0004, intercept =1.268 | Trondelag: slope =0.0002, intercept = 1.497), with the effect being strongest in Rogaland (0.0004), and weakest for Trondelag (0.0002) (Figure 1.) In contrast, abundance of Lepidoptera in both Vestfold og Telemark and Viken appears to decrease over time (Vestfold og Telemark: slope = -6.089, intercept =2.809, | Viken: slope =-4.087, intercept =3.109) with both sites showing a similar negative trend (-6.089 / - 4.087) (Figure 1.).
 
 
-Figure 1: Abundance of Lepidoptera over study duration (2009-2021) across 5 regions of Norway
 ![DIV_plot](https://github.com/morganlangley98/Linear-Mixed-Effect-GBIF-Norway-Moths/assets/122368285/ecaf322b-18d7-43b4-8c24-87c16c7e456e)
 
+Figure 1: Abundance of Lepidoptera over study duration (2009-2021) across 5 regions of Norway
 
 
 
@@ -45,12 +46,18 @@ With regards to species richness, removal of fixed predictors indicates that the
 
 Table 2: Outputs from backwards stepwise model selection with AIC, Deviance, Chi-squared and P value for each term
 
-
+<img width="448" alt="Screenshot 2023-12-06 at 22 40 29" src="https://github.com/morganlangley98/Spatial-temporal-variations-in-species-richness-and-abundance-of-lepidoptera/assets/122368285/92191f0f-8cf6-4ff5-bacd-5a4cdb67a113">
 
 
 
 Following on, the individual regional trends follow a similar pattern to that of relative abundance, with species richness of Agder, Rogaland, and Trondelag increasing across the studies duration (Agder: slope =0.00018, intercept =0.663, | Rogaland: slope = 0.00022, intercept = 0.555| Trondelag: slope = 0.00018, intercept =0.174) (Figure 2.), while that of Vestfold og Telemark and Viken decrease over time (Vestfold og Telemark: slope =-3.43, intercept =1.515, | Viken: slope =-3.837, intercept =1.683) (Figure 2.).
+
+
+![DIV_plot](https://github.com/morganlangley98/Spatial-temporal-variations-in-species-richness-and-abundance-of-lepidoptera/assets/122368285/a241d016-6530-45ca-80bd-0b83a59d8c21)
+
 Figure 2: Lepidoptera species richness over study duration (2009-2021) across 5 regions of Norway
+
+
 In conclusion, Viken and Vestfold og Telemark show negative trends in species richness and abundance over time, while positive trends are seen in Agder, Rogaland and Trondelag. The first hypothesis ‘species richness and abundance will vary across time, with negative trends likely’, is proved partially correct (Figure 1 + 2) with all regions varying in species richness and abundance over time. Although all regions do vary in species richness and abundance, there is no negative trend exhibited by all the regions. Regarding the second hypothesis ‘temporal trends in species richness and abundance of Lepidoptera will vary across regions’, this is confidently proved, with a significant change in species richness and abundance seen in all regions.
  
 As can be seen in Figure 3, the regions the surveys are undertaken from are broadly spread out across Norway. This most likely explains why there are both positive and negative trends seen in the change of species richness and abundance over the 5 regions. It is probable that the regions increasing in species richness and abundance have been negatively influenced in the past by Anthropogenic impacts and are now recovering and or are part of a restoration programme. The regions decreasing in species richness and abundance over time are more uniform with current global biodiversity trends, with a plausible explanation most likely involving further encroachment by humans. Encroachment is generally coupled with associated land use change, reducing habitats for Lepidoptera species, hence the reduction in their numbers.
@@ -59,13 +66,20 @@ It is clear that temporal trends in species richness and abundance of Lepidopter
 Further study could be carried out on species-specific trends, giving more specific effects of where this habitat degradation is occurring (e.g., butterflies have specific food plants, if they are decreasing in numbers then could infer the host plant is also). Additionally, further research could be focused on the regions declining in biodiversity, with the hope that the reasons why are found, allowing attempted mitigation of these effects.
 
 **References**
+
 Åström S, Åström J (2022). Bumblebees and butterflies in Norway. Version 1.4. Norwegian Institute for Nature Research. Sampling event dataset https://doi.org/10.15468/mpsa4g accessed via GBIF.org on 2022-12-09.
+
 Bates, D. et al. (2015) ‘Fitting Linear Mixed-Effects Models Using lme4’, Journal of Statistical Software, 67, pp. 1–48. Available at: https://doi.org/10.18637/jss.v067.i01.
+
 Bates, D. et al. (2018) ‘Parsimonious Mixed Models’. arXiv. Available at: http://arxiv.org/abs/1506.04967 (Accessed: 15 December 2022).
+
 Bates, D. et al. (2022) ‘lme4: Linear Mixed-Effects Models using “Eigen” and S4’. Available at: https://CRAN.R-project.org/package=lme4 (Accessed: 15
 December 2022).
+
 Johnson, S.D. (1994) ‘Evidence for Batesian mimicry in a butterfly-pollinated orchid’, Biological Journal of the Linnean Society, 53(1), pp. 91–104. Available
 at: https://doi.org/10.1006/bijl.1994.1062.
+
 Korner-Nievergelt F, Roth T, von Felten S, Guelat J, Almasi B, Korner-Nievergelt P (2015). Bayesian Data Analysis in Ecology using Linear Models with
 R, BUGS and Stan. Elsevier.
+
 Warren, M.S. et al. (2021) ‘The decline of butterflies in Europe: Problems, significance, and possible solutions’, Proceedings of the National Academy of Sciences of the United States of America, 118(2), p. e2002551117. Available at: https://doi.org/10.1073/pnas.2002551117.
